@@ -21,8 +21,13 @@ setSecondsTimeout(function () {
 setSecondsTimeout(function () {
     console.log('world');
 }, 1.4); // should print 'world' after 1400 milliseconds
+
+
 ***********************************************************************/
 
+let setSecondsTimeout = function(cb, num) {
+  setTimeout(cb, num * 1000)
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

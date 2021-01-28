@@ -22,6 +22,9 @@ setSecondsTimeoutArgs(function(arg1, arg2) {
 }, 0.7, 'hello', 'world'); // should print 'hello-world' after 700ms
 ***********************************************************************/
 
+let setSecondsTimeoutArgs = function(cb, num, ...args) {
+  setTimeout(cb, num * 1000, ...args);
+}
 
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

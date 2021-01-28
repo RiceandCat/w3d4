@@ -9,6 +9,18 @@ node with the examples below.
 
 Examples:
 
+
+//make a key for the function
+//have the value equal the function
+***********************************************************************/
+
+let boundTimeout = function(cb, delay, obj) {
+  debugger
+  obj.noise = cb;
+  setTimeout(obj.noise(), delay);
+}
+
+
 function bark() {
   console.log(this.name + ' barks');
 }
@@ -24,7 +36,6 @@ boundTimeout(bark, 500, dog); // prints 'Fido barks' after 500 ms
 boundTimeout(bark, 500, cat); // prints 'Sennacy barks' after 500 ms
 boundTimeout(meow, 500, dog); // prints 'Fido meowsss' after 500 ms
 boundTimeout(meow, 500, cat); // prints 'Sennacy meowsss' after 500 ms
-***********************************************************************/
 
 
 
