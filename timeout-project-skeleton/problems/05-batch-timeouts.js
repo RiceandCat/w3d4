@@ -37,6 +37,30 @@ have the same length.
 //4. putting the cbs and delays into timeout objects and then pushing them into our new array
 //5. return new array
 
+function batchTimeouts(cb, array){
+  let newArray = [];
+
+  for(let i = 0; i < cb.length; i++){
+    newArray[i] = setTimeout(cb[i], array[i])
+  }
+
+  return newArray;
+}
+
+const sayHello = () => console.log('hi');
+const sayGoodbye = () => console.log('bye');
+const shout = () => console.log('WHAT?');
+const tasks = [sayHello, sayGoodbye, shout];
+const delays = [500, 200, 900];
+
+const timeoutObjs = batchTimeouts(tasks, delays);
+// should print: 
+//  'bye' after 200 ms
+//  'hi' after 500 ms
+//  'WHAT?' after 900 ms
+
+console.log(timeoutObjs); // [ Timeout {...},  Timeout {...}, Timeout {...} ]
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
