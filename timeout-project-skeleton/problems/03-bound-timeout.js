@@ -16,10 +16,8 @@ Examples:
 
 let boundTimeout = function(cb, delay, obj) {
   debugger
-  obj.noise = cb;
-  let value = cb.bind(obj);
-  // console.log(cb.bind(obj));
-  setTimeout(value, delay);
+
+  setTimeout(cb.bind(obj), delay);
 }
 
 

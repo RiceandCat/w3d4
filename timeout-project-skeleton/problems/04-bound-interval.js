@@ -15,10 +15,10 @@ Examples:
 
 let boundInterval = function(cb, delay, obj) {
   debugger
-  obj.noise = cb;
-  let value = cb.bind(obj);
+  // obj.noise = cb;
+  // let value = cb.bind(obj);
   // console.log(cb.bind(obj));
-  return setInterval(value, delay);
+  return setInterval(cb.bind(obj), delay);
 }
 
 
