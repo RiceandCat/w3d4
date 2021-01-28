@@ -22,7 +22,7 @@ console.log(slowerGoodbye); // [Function]
 slowerGoodbye(); // prints 'bye' after 1750 ms
 ***********************************************************************/
 
-
+function postpone(cb, delay)
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
